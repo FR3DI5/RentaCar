@@ -1,0 +1,60 @@
+/* Estilos base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar personalizada */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    color: #ffc107;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../img/carro.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Tarjetas de autos */
+.card-auto {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-auto:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer mejorado */
+footer {
+    background-color: #343a40 !important;
+}
+
+.social-links a {
+    color: white;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+}
+
+
