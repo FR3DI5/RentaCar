@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'rentacar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql',
+        'USER': 'admin',
+        'PASSWORD': '3306',
+        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'PORT': '',
     }
 }
 
@@ -127,4 +131,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'autos/static')]
+
+AUTH_USER_MODEL = 'autos.CustomUser'
+

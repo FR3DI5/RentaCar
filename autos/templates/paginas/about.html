@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RentaCar 🚗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="bi bi-car-front-fill"></i> RentaCar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacto/">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/autos/">Autos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">Acerca</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% block body %}
+
+  <div class="jumbotron p-5 text-white rounded bg-info" style="height:560px ">
+    <div class="col-md-6 px-0" style="margin:95px">
+      <h1 class="display-4 " style="font-size:90px">¡Conocenos!</h1>
+      <p class="lead my-3" >Rentacar sigue dando sus servicios desde 2012 y expandido digitalmente desde 2018. Con mas de 10 años que respaldan nuestros excelentes servicios, Rentacar esta listo para sus requisitos con una completa y renovada flota de autos.</p>
+      {% comment %} <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continuar leyendo...</a></p> {% endcomment %}
+      <a class="btn btn-dark btn-lg" href="#123" role="button">ver mas</a>
+    </div>
+  </div>
+  <div class="p-3 mb-2  text-info" id="123">
+    <div class="row m-5" >
+        <div class="container fluid px-0"><h1 class="my-3 text-center">¿Por qué escojernos?</h1></div>
+        <div class="col-xl-4">
+          <div class="container fluid px-0" >
+            {%load static%}
+            <img src = "{%static "trust.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+          </div>
+          <h2 class="hd my-2 " style=" text-align:center">Seguridad</h2>
+          <p style="font-size:20px; text-align:center">El sitio web más confiable para alquilar un vehículo en el mundo. Todos los vehículos están en perfecto estado y en perfecto estado. El mantenimiento se realiza cada dos semanas..</p>
+        
+        </div><!-- /.col-lg-4 -->
+        <div class="col-xl-4">
+          <div class="container" >
+            {%load static%}
+            <img src = "{%static "affordable.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+          </div>
+          <h2 class="hd my-2 " style=" text-align:center">Buenos precios</h2>
+          <p style="font-size:20px ; text-align:center">Todos los alquileres tienen precios accesibles. Si hay algún problema con el vehículo, hay una política de devolución. Puede pagar en línea de forma segura.</p>
+         
+        </div><!-- /.col-lg-4 -->
+        <div class="col-xl-4">
+          <div class="container-center" >
+            {%load static%}
+            <img src = "{%static "car-wash.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+          </div>
+          <h2 class="hd my-2" style=" text-align:center">Agradable</h2>
+          <p style="font-size:20px ; text-align:center">¡Su comodidad es nuestra prioridad! Todos nuestros vehículos están en perfecto estado de mantenimiento e higiene.</p>
+        </div><!-- /.col-lg-4 -->
+    </div>
+    </div> 
+{% endblock body %}
+
+   <!-- Footer -->
+   <footer class="mt-5">
+    <div class="container">
+        <p style="color: white;">&copy; <span id="current-year"></span> Copyright: RentaCar - Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap y JS personalizado -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

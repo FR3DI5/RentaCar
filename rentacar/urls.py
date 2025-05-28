@@ -18,8 +18,17 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include  # <-- Agrega include
+from django.views.generic.base import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('autos.urls')),  # <-- Conecta las URLs de autos
+    path('',include('autos.urls')),
+    path('', TemplateView.as_view),
 ]
+
+admin.site.site_header = "CarZest Admin"
+admin.site.site_title = "CarZest Admin Portal"
+admin.site.index_title = "Bienvenido al Portal de Rentacar"
